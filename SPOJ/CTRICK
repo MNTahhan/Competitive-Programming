@@ -5,7 +5,7 @@
 	put the third card three positions away from the second card and so on.. 
 	if you reach the end of the array continue counting from the begenning (only
 	count the empty places)
-	to make the solution faster, try to skip the adjacent non-empty places by 
+	to make the solution faster, skip the adjacent non-empty places by 
 	connecting them as one component (make disjoint sets)
 
 */
@@ -37,7 +37,7 @@ int main() {
 				i=find(i+1);
 			v[i]=ans++;
 			p[i]=find(p[i+1]);
-			cur=(cur+1)%n;
+			cur=(cur+1)%n; // every n moves returns the deck the its initial state
 			last=i;
 		}
 		printf("%d",v[0]);
