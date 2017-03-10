@@ -1,3 +1,10 @@
+
+/*
+	The idea:
+	get the points that divides the three lines, then get the intersection points (f,e,d), then get the new traingle's area
+*/
+
+
 #include <iostream>
 #include <cmath>
 #include <complex>
@@ -59,6 +66,7 @@ bool intersectSegments(point a, point b, point c, point d, point & intersect) {
 
 point a,b,c,f,d,e,r,p,q;
 
+// get the point that divides the line (a,b) so that the ration between the two new lines is 1:2
 point get(point &a,point &b){
 	double x,y;
 	x=(1.0*b.X+2.0*a.X)/3.0;
