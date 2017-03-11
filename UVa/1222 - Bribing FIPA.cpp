@@ -15,9 +15,6 @@ int dfs(int u){
 	return sz[u];
 }
 void calc(int u){
-	if(vis[u]==vs)
-		return;
-	vis[u]=vs;
 	dp[u][0]=0;
 	for(int i=0;i<adj[u].size();++i)
 		calc(adj[u][i]);
@@ -67,7 +64,6 @@ int main() {
 				adj[0].push_back(i);
 		++vs;
 		dfs(0);
-		++vs;
 		calc(0);
 		int ans=INT_MAX;
 		for(int i=m;i<=n;++i)
