@@ -1,25 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 22;
-int n,m,vis[N],vs,s,t,d;
+int n,m,vis[N],s,t,d;
 vector<pair<int,int> >adj[N];
 vector<pair<int,vector<int> > >ans;
 vector<int>cur;
 void dfs(int u,int c){
-	if(vis[u]==vs)
+	if(vis[u])
 		return;
-	vis[u]=vs;
+	vis[u]=1;
 	cur.push_back(u);
 	if(u==t){
 		if(c<=d)
 			ans.push_back(make_pair(c,cur));
-		vis[u]=vs-1;
+		vis[u]=0;
 		cur.pop_back();
 		return;
 	}
 	for(int i=0;i<adj[u].size();++i)
 		dfs(adj[u][i].first,adj[u][i].second+c);
-	vis[u]=vs-1;
+	vis[u]=0;
 	cur.pop_back();
 }
 int main() {
@@ -38,8 +38,6 @@ int main() {
 		}
 		scanf("%d%d%d",&s,&t,&d);
 		ans.clear();
-		cur.clear();
-		++vs;
 		dfs(s,0);
 		printf("Case %d:\n",h++);
 		if(!ans.size())
