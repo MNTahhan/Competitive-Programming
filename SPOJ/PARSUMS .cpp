@@ -36,12 +36,15 @@ int main(){
 			a[i]+=a[i-1];
 		}
 		for(int i=n+1;i<=2*n;++i)
+			// sum of the previous n-length interval
 			a[i]=a[i-1]+a[i-n]-a[i-n-1];
 		memset(seg,0x7f,sizeof 0x7f);
 		build(1,1,2*n);
 		int ans=n;
 		for(int i=1;i<=n;++i){
+			// x is the minimum number in the next n-length interval
 			ll x = get(1,1,2*n,i,i+n-1);
+			// x - a[i-1] is the sum of the interval
 			if(x-a[i-1]<0)
 				--ans;
 		}
