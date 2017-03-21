@@ -64,11 +64,11 @@ int main() {
 			adj[u].push_back(v);
 		}
 		++vs;
-		int len=DFS(0,-1); // total number of nodes reachable from the server 
+		int sz=DFS(0,-1); // total number of nodes reachable from the server 
 		vector<int>ans;
 		for(int i=0;i<n;++i){
 			++vs;
-			if(DFS(0,i)+1!=len) // if this is true then there are nodes that were blocked from the server by deleting this node
+			if(DFS(0,i)+1!=sz) // if this is true then there are nodes that were blocked from the server by deleting this node
 				ans.push_back(i);
 		}
 		sort(ans.begin(),ans.end());
