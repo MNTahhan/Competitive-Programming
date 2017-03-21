@@ -1,3 +1,11 @@
+/*
+The idea: use DFS to calculate the total number of nodes that is reachable from the server, then do the following for each node:
+	  try to delete it from the graph and again calulate the number of reachable nodes from the server, if the new size of reachable
+	  nodes + 1 (the node we deleted in the current iteration) == the total number of nodes reachable from the server, then this is 
+	  not a critical node, otherwise it is a critical node
+*/
+
+
 #include <iostream>	
 #include <time.h>
 #include <vector>
@@ -29,7 +37,7 @@ typedef long long ll;
 const int N = 2e5 + 10;
 int n,m,vis[N],vs;
 vector<int>adj[N];
-int DFS(int u,int no){
+int DFS(int u,int no){ // 'no' is the deleted node from the current iteration
 	if(vis[u]==vs || u == no)
 		return 0;
 	vis[u]=vs;
@@ -56,11 +64,11 @@ int main() {
 			adj[u].push_back(v);
 		}
 		++vs;
-		int len=DFS(0,-1);
+		int len=DFS(0,-1); // total number of nodes reachable from the server 
 		vector<int>ans;
 		for(int i=0;i<n;++i){
 			++vs;
-			if(DFS(0,i)+1!=len)
+			if(DFS(0,i)+1!=len) // if this is true then there are nodes that were blocked from the server by deleting this node
 				ans.push_back(i);
 		}
 		sort(ans.begin(),ans.end());
