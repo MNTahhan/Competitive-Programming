@@ -72,7 +72,6 @@ int main() {
 			puts("");
 	}
 
-	return 0;
 #if !ONLINE_JUDGE
 	printTime;
 #endif
