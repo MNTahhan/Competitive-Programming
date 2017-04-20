@@ -1,3 +1,9 @@
+/*
+	The idea: calculate the distance from every stone to every marked cell, then the stones with the same distances can replace 
+		  each other, if some array of distances accure n times, then you have n! different possebility, the answer is the 
+		  multiplication of the factorials of every frequency
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
