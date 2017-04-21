@@ -1,5 +1,5 @@
 /*
-  Idea: first, the even-piles will never affect the satate, the one who start taking from them will loose them.
+  Idea: first, the even-piles will never affect the state, the one who start taking from them will loose them.
         now both players will try to take treasures that lies under piles with 1's, because if he in loose state then he will never get the
         chance to take any thing else, and if he is in win state, then he must take as much as he can from them to minimize the looser 
         player score, after all ones finished, the number of odd piles determines the winner, if this number is odd, then the current
