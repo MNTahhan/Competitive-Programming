@@ -1,3 +1,7 @@
+/*
+	The idea: consider each stick as a node, then connect the stick that is on top of each other using brute force, then use disjoint
+		  set to check if two sticks are in the same component.
+*/
 #include<algorithm>
 #include<iostream>
 #include<stdio.h>
