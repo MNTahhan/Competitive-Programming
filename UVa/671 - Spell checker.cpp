@@ -1,3 +1,10 @@
+/*
+	The idea: brute force, first try to the find the word as is, if it not exist then try to match the word with every dictionary
+		  word after each one of the following operations:
+		  1) delete a letter from the current word.
+		  2) delete a letter from the dictionary-word (equivilant to inserting that letter in the current word)
+		  3) match the words if they have the same length and there is one character differs between them. (replace operation)
+*/
 #include <iostream>	
 #include <time.h>
 #include <vector>
