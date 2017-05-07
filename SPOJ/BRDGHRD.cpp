@@ -1,3 +1,7 @@
+/*
+	sort + LIS
+	The idea: compine the two sides and sort according to one of them, then make LIS on the other
+*/
 #include <iostream>	
 #include <time.h>
 #include <vector>
