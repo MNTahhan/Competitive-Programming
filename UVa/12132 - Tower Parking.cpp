@@ -1,3 +1,8 @@
+/*
+	The idea: brute force.
+	pos[i]: the level number of the car i
+	when you wnat to get the i-th car, edit the numbers this level to represent the new positions of the cars
+*/
 #include <iostream>	
 #include <time.h>
 #include <vector>
