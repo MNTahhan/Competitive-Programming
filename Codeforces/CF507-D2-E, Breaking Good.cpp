@@ -1,3 +1,6 @@
+/*
+	The idea: similar to the auther's solution, only implemented using dijkstra
+*/
 #include <iostream>	
 #include <time.h>
 #include <vector>
@@ -34,12 +37,12 @@ struct node {
 	node() { }
 	node(int v, int c, int r):v(v), c(c), r(r) { }
 	inline bool operator<(const node &e)const {
-		if (c == e.c)
+		if (c == e.c) 
 			return r > e.r;
 		return c > e.c;
 	}
 };
-struct node2 {
+struct node2 { // 
 	int u, v, c;
 	node2() { }
 	node2(int u, int v, int c):u(min(u, v)), v(max(u, v)), c(c) { }
@@ -57,9 +60,9 @@ pair<int, int> cost[N];
 map<int, int>e[N];
 void dijkstra() {
 	for (int i = 0; i < N; ++i)
-		cost[i] = {1e9,1e9};
+		cost[i] = {1e9,1e9}; // minimize c & r in the state
 	priority_queue<node>q;
-	q.push(node(0,0,0));
+	q.push(node(0,0,0)); // (the node, the cost, the total repaired edges till now)
 	cost[0] = {0,0};
 	while (q.size()) {
 		node e = q.top();
@@ -99,14 +102,14 @@ int main() {
 	p[0] = -1;
 	dijkstra();
 	vector<node2>ans;
-	for (int i = n - 1; i != 0; i = p[i]) {
-		int idx = e[i][p[i]];
+	for (int i = n - 1; i != 0; i = p[i]) { // go through the path and mark the path of dijkstra and add them to the answer only 
+		int idx = e[i][p[i]];           // if it broken
 		if (edge[idx].c == 0)
 			ans.push_back(node2(i, p[i], 1));
 		edge[idx].c = -1;
 	}
 	for (int i = 0; i < m; ++i) 
-		if (edge[i].c == 1)
+		if (edge[i].c == 1) // non-path edge & working, so distroy it
 			ans.push_back(node2(edge[i].u, edge[i].v, 0));
 	printf("%d\n", ans.size());
 	for (int i = 0; i < ans.size(); ++i)
