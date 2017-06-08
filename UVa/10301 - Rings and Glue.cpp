@@ -1,5 +1,5 @@
 /*
-  The idea: brute force + disjoint sets, I used the geometry library developed by coatch Mohammad Abdulwahab to check circle-circle intersection
+  The idea: disjoint sets, I used the geometry library developed by coatch Mohammad Abdulwahab to check circle-circle intersection
 */
 
 #include <iostream>	
