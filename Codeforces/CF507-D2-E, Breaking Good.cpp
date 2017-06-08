@@ -1,5 +1,6 @@
 /*
 	The idea: similar to the auther's solution, only implemented using dijkstra
+	tutorial: http://codeforces.com/blog/entry/15975
 */
 #include <iostream>	
 #include <time.h>
