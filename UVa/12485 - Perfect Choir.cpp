@@ -34,9 +34,7 @@
 using namespace std;
 typedef long long ll;
 
-
 int n;
-map<int, int>m;
 
 int main() {
 #if !ONLINE_JUDGE
