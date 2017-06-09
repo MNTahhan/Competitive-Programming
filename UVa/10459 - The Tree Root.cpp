@@ -102,10 +102,11 @@ int main() {
 			best.push_back(v[v.size() / 2]);
 			best.push_back(v[v.size() / 2 - 1]);
 		}
-		calc(node1, -1, 0, 0);
+		// node1 & node2 are the ends of the diameter
+		calc(node1, -1, 0, 0); 
 		calc(node2, -1, 0, 1);
 		for (int i = 0; i < n; ++i)
-			if (d[0][i] == mx || d[1][i] == mx)
+			if (d[0][i] == mx || d[1][i] == mx) // d[0][i] distance from first end, d[1][i] distance from second end
 				worst.push_back(i);
 		sort(best.begin(), best.end());
 		sort(worst.begin(), worst.end());
