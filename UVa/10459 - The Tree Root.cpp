@@ -1,6 +1,7 @@
 /*
   The idea: for the shortest hieght -> the middle of the diameter is the answer, if the diameter length is odd, then the two nodes in the middle are the answer
             for the longest hieght -> pre calculate the distance from all nodes to the ends of the diameter, then check every node, if the distance from it to any end is equal the diameter, then this nodes gives us the worst height
+*/
 #include <iostream>
 #include <time.h>
 #include <vector>
