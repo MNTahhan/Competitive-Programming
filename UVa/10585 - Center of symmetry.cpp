@@ -1,3 +1,7 @@
+/*
+	The idea: find the center of mass of all points, then for every point assume this center is in the middle between it and 
+		  some other point, if the other point does not exist for any point, the answer is 'no', otherwise the answer is 'yes'
+*/
 #include <iostream>	
 #include <time.h>
 #include <vector>
