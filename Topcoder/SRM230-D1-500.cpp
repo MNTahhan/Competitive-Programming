@@ -1,3 +1,8 @@
+/*
+	The idea: a/b is divisible by x if the number of x's in a is larger than b, and as we can loop on all the numbers in a raw, we 
+		  can test this property for all the 6 numbers.
+		  how to count number of d's in n! : http://www.geeksforgeeks.org/count-trailing-zeroes-factorial-number/
+*/
 #include<bits/stdc++.h>
 using namespace std;
 int calc(int n,int d){
