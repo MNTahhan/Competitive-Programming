@@ -1,3 +1,6 @@
+/*
+	The idea: just test the intersection of the wall and the line from point (0,0) and the mirror.
+*/
 #include <iostream>	
 #include <time.h>
 #include <vector>
