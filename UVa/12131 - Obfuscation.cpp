@@ -1,5 +1,5 @@
 /*
-	The idea: count the number of solutions with dp, and retrieve the solution backwords from dp array
+	The idea: count the number of solutions with dp, and retrieve the solution backwards from dp array
 */
 #include <bits/stdc++.h>
 using namespace std;
