@@ -7,10 +7,6 @@
 using namespace std;
 int n,m,cum[44][44],dp[44][44][44][44];
 char s[44][44];
-int calc(int i,int j,int x,int y){
-	if(i>x || j>y) return 0;
-	return cum[x][y]-cum[x][j-1]-cum[i-1][y]+cum[i-1][j-1]==0;
-}
 int main() {
 	int q;
 	scanf("%d%d%d",&n,&m,&q);
