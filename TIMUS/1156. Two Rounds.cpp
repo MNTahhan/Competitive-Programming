@@ -1,5 +1,5 @@
 /*
-  The idea: the same idea in this solution
+  The idea: the same idea in this solution https://github.com/Otrebus/timus/blob/master/1156.cpp
 */
 #include <iostream>	
 #include <time.h>
