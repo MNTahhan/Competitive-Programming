@@ -1,3 +1,4 @@
+/* The idea: The same idea in the tutorial */
 #include <iostream>	
 #include <time.h>
 #include <vector>
