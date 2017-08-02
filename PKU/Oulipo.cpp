@@ -1,5 +1,5 @@
 /*
-  The idea: strait forward KMP
+  The idea: straightforward KMP
 */
 #include <iostream>	
 #include <time.h>
