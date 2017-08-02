@@ -60,7 +60,7 @@ int main() {
 		char c;
 		vector<int>ans;
 		cin.ignore();
-		while ((c = getchar()) && c != '\n' && c != -1) {
+		while ((c = getchar()) && c != '\n') {
 			++i;
 			while (k && s[k] != c)
 				k = f[k - 1];
