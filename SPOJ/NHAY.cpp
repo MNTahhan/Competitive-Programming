@@ -33,16 +33,16 @@
 #endif
 using namespace std;
 typedef long long ll;
-
-
-
+ 
+ 
+ 
 int main() {
 #if !ONLINE_JUDGE
 	freopen("a.txt", "r", stdin);
 	//freopen("b.txt", "w", stdout);
 	decTime;
 #endif
-
+ 
 	int n, p = 0;
 	while (scanf("%d", &n) > 0) {
 		string s;
@@ -51,10 +51,7 @@ int main() {
 		for (int i = 1, k = 0; i < n; ++i) {
 			while (k && s[k] != s[i])
 				k = f[k - 1];
-			if (s[k] == s[i])
-				f[i] = ++k;
-			else
-				f[i] = k;
+			f[i] = k + (s[i] == s[k]);
 		}
 		int k = 0, i = -1;
 		char c;
@@ -83,4 +80,4 @@ int main() {
 	printTime;
 #endif
 	return 0;
-}
+} 
