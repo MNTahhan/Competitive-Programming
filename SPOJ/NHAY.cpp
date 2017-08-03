@@ -1,5 +1,7 @@
 /*
   The idea: KMP
+  	    build the failure array on the needle string, then read Haystack string chracters one by one, and perfome KMP while 
+	    searching, because the Haystack pointer will never go back
 */
 #include <iostream>	
 #include <time.h>
@@ -51,7 +53,7 @@ int main() {
 		for (int i = 1, k = 0; i < n; ++i) {
 			while (k && s[k] != s[i])
 				k = f[k - 1];
-			f[i] = k + (s[i] == s[k]);
+			f[i] = (k += (s[i] == s[k]));
 		}
 		int k = 0, i = -1;
 		char c;
