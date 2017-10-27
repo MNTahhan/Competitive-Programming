@@ -8,10 +8,9 @@
 using namespace std;
 typedef long long ll;
 
-int n, f[100010];
+int n;
 bool num[100010];
 vector<int> p;
-vector<int> t;
 vector<ll> ans[10010];
 
 int main() {
