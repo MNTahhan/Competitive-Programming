@@ -47,13 +47,6 @@ bool cmpX(const Point &a, const Point &b) {
 		return a.x < b.x;
 	return a.y < b.y;
 }
-struct cmpY {
-	inline bool operator()(const Point &a, const Point &b)const {
-		if(a.y != b.y)
-			return a.y < b.y;
-		return a.x < b.x;
-	}
-};
 int n, l[N], r[N];
 
 
