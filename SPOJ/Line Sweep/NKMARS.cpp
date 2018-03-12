@@ -71,13 +71,11 @@ bool cmpX(const e &a, const e &b) {
 	int x1 = !a.type ? r[a.idx].x : r[a.idx].a;
 	int x2 = !b.type ? r[b.idx].x : r[b.idx].a;
 	return x1 < x2;
-	return r[a.idx].x < r[b.idx].x;
 }
 bool cmpY(const e &a, const e &b) {
 	int y1 = !a.type ? r[a.idx].b : r[a.idx].y;
 	int y2 = !b.type ? r[b.idx].b : r[b.idx].y;
 	return y1 > y2;
-	return r[a.idx].y < r[b.idx].y;
 }
 
 int main() {
