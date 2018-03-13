@@ -42,11 +42,6 @@
 using namespace std;
 typedef long long ll;
 
-struct point {
-	int x, y;
-	point() { }
-	point(int x, int y):x(x), y(y) { }
-};
 struct rect {
 	int x, y, a, b;
 	rect() { }
