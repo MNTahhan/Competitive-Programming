@@ -1,5 +1,6 @@
 /*
   get the center of the polygon, then compare the distance with each point of the polygon
+  https://github.com/mostafa-saad/MyCompetitiveProgramming/blob/master/UVA/UVA_10005.txt
 */
 #define _CRT_SECURE_NO_WARNINGS
 #ifdef MYDEF
