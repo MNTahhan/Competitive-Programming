@@ -1,5 +1,5 @@
 /*
-  You can find the solution here: http://uvacode.blogspot.com/2011/05/hints-for-uva-problem-set-10200.html
+  The same solution explained here: http://uvacode.blogspot.com/2011/05/hints-for-uva-problem-set-10200.html
 */
 #define _CRT_SECURE_NO_WARNINGS
 #ifdef MYDEF
