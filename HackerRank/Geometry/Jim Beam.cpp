@@ -38,7 +38,7 @@ const double PI = acos(-1.0);
 const double EPS = 1e-9;
 
 typedef complex<double> point;
-
+ 
 #define X real()
 #define Y imag()
 #define angle(a)                (atan2((a).imag(), (a).real()))
