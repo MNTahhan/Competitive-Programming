@@ -28,8 +28,6 @@
 using namespace std;
 typedef long long ll;
 
-
-
 int main() {
 #if !ONLINE_JUDGE
 	freopen("a.txt", "r", stdin);
@@ -46,7 +44,6 @@ int main() {
 		else
 			puts("Mikael");
 	}
-
 
 	return 0;
 }
